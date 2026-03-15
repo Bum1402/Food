@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบบันทึกคะแนนภาษาอังกฤษ ป.5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Kanit:wght@300;400;500;600&family=Mitr:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="snow-container"></div>
+    <div class="decor-item item-1">🎄</div>
+    <div class="decor-item item-2">🎁</div>
+    <div class="decor-item item-3">🔔</div>
+
+    <header>
+        <div class="character-container">
+            <div class="char santa">🎅</div>
+            <div class="char reindeer">🦌</div>
+            <div class="char snowman">☃️</div>
+        </div>
+        <div class="header-content">
+            <h1>🎅 ภาษาอังกฤษ ป.5</h1>
+            <p>เทศกาลบันทึกคะแนนและเช็คชื่อเข้าเรียน</p>
+        </div>
+        <div class="header-actions">
+            <button id="addStudentBtn" class="btn btn-primary">✨ เพิ่มนักเรียน</button>
+            <button id="exportDataBtn" class="btn btn-secondary">🎁 บันทึกข้อมูล</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="table-container">
+            <table id="scoreTable">
+                <thead>
+                    <tr>
+                        <th rowspan="2" class="sticky-col">เลขที่</th>
+                        <th rowspan="2" class="sticky-col name-col">ชื่อ-นามสกุล</th>
+                        <th colspan="10">ช่องเก็บคะแนน (1-10)</th>
+                        <th colspan="2">คะแนนสอบ</th>
+                        <th rowspan="2">เช็คชื่อ</th>
+                        <th rowspan="2">คะแนนรวม</th>
+                        <th rowspan="2">จัดการ</th>
+                    </tr>
+                    <tr>
+                        <th class="vertical-th"><span>1. Animal (10)</span></th>
+                        <th class="vertical-th"><span>2. Food and Drink (10)</span></th>
+                        <th class="vertical-th"><span>3. Fruit (10)</span></th>
+                        <th class="vertical-th"><span>4. Weather (10)</span></th>
+                        <th class="vertical-th"><span>5. Sport (10)</span></th>
+                        <th class="vertical-th"><span>6. Vegetable (10)</span></th>
+                        <th class="vertical-th"><span>7. Things in classroom (10)</span></th>
+                        <th class="vertical-th"><span>8. Subject (10)</span></th>
+                        <th class="vertical-th"><span>9. What's the matter? (10)</span></th>
+                        <th class="vertical-th"><span>10. Colour (10)</span></th>
+                        <th>กลางภาค</th><th>ปลายภาค</th>
+                    </tr>
+                </thead>
+                <tbody id="studentList">
+                    <!-- Students will be added here via JS -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Add Student Modal -->
+    <div id="studentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>เพิ่มนักเรียนใหม่</h2>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="studentNo">เลขที่:</label>
+                    <input type="number" id="studentNo" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="studentName">ชื่อ-นามสกุล:</label>
+                    <input type="text" id="studentName" required placeholder="เช่น เด็กชายสมชาย ใจดี">
+                </div>
+                <button type="submit" class="btn btn-primary">บันทึก</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 ระบบจัดการชั้นเรียนภาษาอังกฤษ ป.5 | สไตล์พาสเทลแสนหวาน ✨</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
